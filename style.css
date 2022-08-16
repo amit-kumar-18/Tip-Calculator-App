@@ -241,7 +241,7 @@ input[type='number'] {
 }
 
 .attribution {
-  position: absolute;
+  position: relative;
   bottom: 5px;
 }
 
