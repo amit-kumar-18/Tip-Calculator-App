@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+body img {
+  margin: 20px 0;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(38, 192, 171, 0.3);
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.input .bill {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input .bill label {
+  margin-bottom: 10px;
+  color: hsl(186, 14%, 43%);
+}
+
+.input .bill input {
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: inherit;
+  text-align: right;
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+  font-size: 18px;
+  background-image: url(/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+/* to disable the arrow in the input field */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bill input::placeholder {
+  color: hsl(184, 14%, 56%);
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+}
+
+.input .bill input:focus {
+  outline-color: hsl(172, 67%, 45%);
+}
+
+.input .tip h3 {
+  margin: 0;
+  color: hsl(186, 14%, 43%);
+  font-size: 16px;
+}
+
+.input .tip ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.input .tip ul .percentage {
+  list-style-type: none;
+  height: 45px;
+  width: 130px;
+  background-color: hsl(183, 100%, 15%);
+  margin-top: 10px;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.input .tip ul .percentage:hover {
+  background-color: rgba(38, 192, 171, 0.5);
+  color: hsl(183, 100%, 15%);
+}
+
+.input .tip ul .percentage:active {
+  transform: scale(0.98);
+}
+
+.input .tip ul .custom {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  text-align: center;
+  color: hsl(183, 100%, 15%);
+  font-family: inherit;
+}
+
+.input .tip ul .custom:focus {
+  outline-color: hsl(172, 67%, 45%);
+  background-color: #fff;
+}
+
+.input .tip ul .custom:hover {
+  background-color: hsl(189, 41%, 97%);
+}
+.custom::placeholder {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
+
+.input .tip ul .custom:active {
+  transform: scale(1);
+}
+
+.input .people-div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.people-div h3 {
+  font-size: 12px;
+  color: hsl(354, 100%, 66%);
+}
+
+.input .bill.people {
+  margin: 10px 0;
+}
+
+.input .bill.people label {
+  margin: 0;
+}
+
+.input .bill.people input {
+  background-image: url(/images/icon-person.svg);
+}
+
+.input .bill.people.active {
+  color: red;
+}
+
+.output {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.output .calculate .tip-amount,
+.output .calculate .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.output .calculate .tip-amount small,
+.output .calculate .total small {
+  color: #fff;
+}
+
+.output .calculate .tip-amount span,
+.output .calculate .total span {
+  color: hsl(184, 14%, 56%);
+}
+
+.output .calculate .tip-amount h1,
+.output .calculate .total h1 {
+  margin: 0;
+  padding-left: 30px;
+  color: hsl(172, 67%, 45%);
+  background: url(/images/icon-dollar.svg) no-repeat left center;
+  background-size: 20px;
+}
+
+.output .btn {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: hsl(172, 67%, 45%);
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.output .btn:hover {
+  background-color: rgba(38, 192, 171, 0.8);
+  color: hsl(183, 100%, 15%);
+}
+
+.output .btn:focus {
+  outline: none;
+}
+
+.output .btn:active {
+  transform: scale(0.98);
+}
+
+.attribution {
+  position: relative;
+  bottom: 5px;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(183, 100%, 15%);
+}
+
+.attribution a:hover {
+  color: hsl(186, 14%, 43%);
+}
+
+@media (min-width: 1000px) {
+  body {
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  body img {
+    margin: 0;
+  }
+
+  .container {
+    flex-direction: row;
+    width: 45vw;
+  }
+
+  .input {
+    width: 50%;
+    margin: 0 20px 0 0;
+  }
+
+  .input .tip ul .percentage {
+    width: 95px;
+  }
+
+  .output {
+    width: 50%;
+  }
+
+  .attribution {
+    position: absolute;
+    bottom: 10px;
+  }
+}

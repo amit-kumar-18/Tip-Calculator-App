@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/images/icon.png" type="image/x-icon" />
+
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <img src="/images/logo.svg" alt="img" />
+    <div class="container">
+      <div class="input">
+        <div class="bill">
+          <label for="bill">Bill</label>
+          <input type="number" id="bill" placeholder="0" />
+        </div>
+        <div class="people bill">
+          <div class="people-div">
+            <label for="people-no"> Number of People</label>
+          </div>
+          <input type="number" id="people-no" placeholder="0" />
+        </div>
+        <div class="tip">
+          <h3>Select Tip %</h3>
+          <ul>
+            <li class="percentage tip-selected">5%</li>
+            <li class="percentage tip-selected">10%</li>
+            <li class="percentage tip-selected">15%</li>
+            <li class="percentage tip-selected">25%</li>
+            <li class="percentage tip-selected">50%</li>
+
+            <input
+              type="number"
+              placeholder="Custom"
+              class="percentage custom"
+              id="custom"
+            />
+          </ul>
+        </div>
+      </div>
+
+      <div class="output">
+        <div class="calculate">
+          <div class="tip-amount">
+            <small> Tip Amount <br /><span>/ person</span> </small>
+            <h1 id="tip">0.00</h1>
+          </div>
+          <div class="total">
+            <small> Total <br /><span>/ person</span></small>
+            <h1 id="total">0.00</h1>
+          </div>
+        </div>
+        <div class="reset">
+          <button class="btn" id="btn">RESET</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">Coded by <a href="#">Amit Kumar</a>.</div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
