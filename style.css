@@ -16,7 +16,7 @@ body {
 }
 
 body img {
-  margin: 20px 0;
+  margin-bottom: 40px;
 }
 
 .container {
@@ -68,6 +68,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .bill input::placeholder {
   color: hsl(184, 14%, 56%);
   font-family: 'Space Mono', monospace;
@@ -92,8 +96,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.input .tip ul .percentage {
+.input .tip ul li {
   list-style-type: none;
+}
+
+.input .tip ul .percentage {
   height: 45px;
   width: 130px;
   background-color: hsl(183, 100%, 15%);
@@ -234,7 +241,7 @@ input::-webkit-inner-spin-button {
 }
 
 .attribution {
-  position: relative;
+  position: absolute;
   bottom: 5px;
 }
 
@@ -251,10 +258,6 @@ input::-webkit-inner-spin-button {
   body {
     overflow: hidden;
     height: 100vh;
-  }
-
-  body img {
-    margin: 0;
   }
 
   .container {

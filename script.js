@@ -49,14 +49,18 @@ custom.addEventListener('input', (e) => {
 })
 
 btn.addEventListener('click', () => {
-  location.reload()
+  bill.value = ''
+  peopleNo.value = ''
+  custom.value = ''
+  tipAmount.innerText = '0.00'
+  total.innerText = '0.00'
 })
 
 function calculateTip(Percentage) {
   if (Percentage >= 1) {
     let totalTip = ((Percentage / 100) * inputBill) / inputPeople
 
-    tipAmount.innerText = totalTip
+    tipAmount.innerText = totalTip.toFixed(2)
     tipPerPerson = totalTip
   } else {
     tipAmount.innerText = '0.00'
@@ -67,7 +71,7 @@ function calculateTotal(amount) {
   if (amount >= 1) {
     let totalAmount = (inputBill + tipPerPerson) / inputPeople
 
-    total.innerText = totalAmount
+    total.innerText = totalAmount.toFixed(2)
   } else {
     total.innerText = '0.00'
   }
