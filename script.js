@@ -13,12 +13,12 @@ let customTip = ''
 let tipPerPerson = ''
 
 bill.addEventListener('input', (e) => {
-  inputBill = +e.target.value
+  inputBill = parseFloat(e.target.value)
 })
 
 peopleNo.addEventListener('input', (e) => {
   remove()
-  inputPeople = +e.target.value
+  inputPeople = parseInt(e.target.value)
   if (inputPeople === 0) {
     peopleDiv.innerHTML += `
             <h3>Can't be Zero</h3
@@ -33,15 +33,19 @@ peopleNo.addEventListener('input', (e) => {
 
 tipSelected.forEach((tip) => {
   tip.addEventListener('click', (e) => {
-    let tipPercentage = e.target.innerText
-    tipPercentage = +tipPercentage.substr(0, tipPercentage.length - 1)
-    calculateTip(tipPercentage)
-    calculateTotal(inputBill)
+    if (inputBill > 0 && inputPeople > 0) {
+      let tipPercentage = e.target.innerText
+      tipPercentage = parseInt(
+        tipPercentage.substr(0, tipPercentage.length - 1)
+      )
+      calculateTip(tipPercentage)
+      calculateTotal(inputBill)
+    }
   })
 })
 
 custom.addEventListener('input', (e) => {
-  let customPercentage = +e.target.value
+  let customPercentage = parseFloat(e.target.value)
   if (inputBill > 0 && inputPeople > 0) {
     calculateTip(customPercentage)
     calculateTotal(inputBill)
@@ -54,6 +58,10 @@ btn.addEventListener('click', () => {
   custom.value = ''
   tipAmount.innerText = '0.00'
   total.innerText = '0.00'
+  inputBill = 0
+  inputPeople = 0
+  customTip = 0
+  tipPerPerson = 0
 })
 
 function calculateTip(Percentage) {
