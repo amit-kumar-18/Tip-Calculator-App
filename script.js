@@ -6,6 +6,7 @@ const total = document.getElementById('total')
 const btn = document.getElementById('btn')
 const peopleDiv = document.querySelector('.people-div')
 const tipSelected = document.querySelectorAll('.tip-selected')
+const tipMessage = document.getElementById('check-percentage')
 
 let inputBill = ''
 let inputPeople = ''
@@ -23,7 +24,6 @@ peopleNo.addEventListener('input', (e) => {
     peopleDiv.innerHTML += `
             <h3>Can't be Zero</h3
         `
-    console.log(inputPeople)
   } else if (inputPeople < 0) {
     peopleDiv.innerHTML += `
             <h3>Can't be Negative</h3
@@ -46,9 +46,12 @@ tipSelected.forEach((tip) => {
 
 custom.addEventListener('input', (e) => {
   let customPercentage = parseFloat(e.target.value)
-  if (inputBill > 0 && inputPeople > 0) {
-    calculateTip(customPercentage)
-    calculateTotal(inputBill)
+  remove()
+  if (checkPercentage(customPercentage)) {
+    if (inputBill > 0 && inputPeople > 0) {
+      calculateTip(customPercentage)
+      calculateTotal(inputBill)
+    }
   }
 })
 
@@ -85,8 +88,16 @@ function calculateTotal(amount) {
   }
 }
 
+function checkPercentage(Percentage) {
+  if (Percentage > 100) {
+    tipMessage.classList.add('active')
+    return false
+  } else return true
+}
+
 function remove() {
   peopleDiv.innerHTML = `
     <label for="people-no"> Number of People</label>
     `
+  tipMessage.classList.remove('active')
 }

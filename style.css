@@ -88,6 +88,17 @@ input[type='number'] {
   font-size: 16px;
 }
 
+.input .tip h5 {
+  color: hsl(354, 100%, 66%);
+  margin: 0;
+  margin-top: 8px;
+  display: none;
+}
+
+.input .tip h5.active {
+  display: block;
+}
+
 .input .tip ul {
   display: flex;
   flex-wrap: wrap;
@@ -194,6 +205,7 @@ input[type='number'] {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .output .calculate .tip-amount small,
