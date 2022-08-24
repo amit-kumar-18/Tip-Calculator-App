@@ -11,19 +11,22 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <img role="img" src="/images/logo.svg" alt="img" />
+    <header>
+      <img role="img" src="/images/logo.svg" alt="img" />
+    </header>
+
     <div class="container">
-      <main role="main" class="input">
+      <div role="navigation" class="input">
         <div class="bill">
           <label for="bill">Bill</label>
           <input type="number" id="bill" placeholder="0" />
         </div>
-        <section class="people bill">
+        <div class="people bill">
           <div class="people-div">
             <label for="people-no"> Number of People</label>
           </div>
           <input type="number" id="people-no" placeholder="0" />
-        </section>
+        </div>
         <div class="tip">
           <h3>Select Tip %</h3>
           <ul role="menubar">
@@ -44,9 +47,9 @@
           </ul>
           <h5 id="check-percentage">Tip percentage should be under 100%</h5>
         </div>
-      </main>
+      </div>
 
-      <div role="contentinfo" class="output">
+      <div role="main" class="output">
         <div class="calculate">
           <div class="tip-amount">
             <small> Tip Amount <br /><span>/ person</span> </small>
@@ -63,9 +66,7 @@
       </div>
     </div>
 
-    <!-- <footer  class="attribution">
-      Coded by <a href="#">Amit Kumar</a>.
-    </footer> -->
+    <footer class="attribution">Coded by <a href="#">Amit Kumar</a>.</footer>
 
     <script src="/script.js"></script>
   </body>
