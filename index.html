@@ -16,19 +16,19 @@
     </header>
 
     <div class="container">
-      <div role="navigation" class="input">
-        <div class="bill">
+      <div class="input">
+        <div role="navigation" class="bill">
           <label for="bill">Bill</label>
           <input type="number" id="bill" placeholder="0" />
         </div>
-        <div class="people bill">
+        <div role="main" class="people bill">
           <div class="people-div">
             <label for="people-no"> Number of People</label>
           </div>
           <input type="number" id="people-no" placeholder="0" />
         </div>
         <div class="tip">
-          <h3>Select Tip %</h3>
+          <h3 role="heading">Select Tip %</h3>
           <ul role="menubar">
             <li class="percentage tip-selected">5%</li>
             <li class="percentage tip-selected">10%</li>
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div role="main" class="output">
+      <footer class="output">
         <div class="calculate">
           <div class="tip-amount">
             <small> Tip Amount <br /><span>/ person</span> </small>
@@ -63,10 +63,8 @@
         <div class="reset">
           <button class="btn" id="btn">RESET</button>
         </div>
-      </div>
+      </footer>
     </div>
-
-    <footer class="attribution">Coded by <a href="#">Amit Kumar</a>.</footer>
 
     <script src="/script.js"></script>
   </body>
