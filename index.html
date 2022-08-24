@@ -11,22 +11,22 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <img src="/images/logo.svg" alt="img" />
+    <img role="img" src="/images/logo.svg" alt="img" />
     <div class="container">
       <main role="main" class="input">
         <div class="bill">
           <label for="bill">Bill</label>
           <input type="number" id="bill" placeholder="0" />
         </div>
-        <div class="people bill">
+        <section class="people bill">
           <div class="people-div">
             <label for="people-no"> Number of People</label>
           </div>
           <input type="number" id="people-no" placeholder="0" />
-        </div>
+        </section>
         <div class="tip">
           <h3>Select Tip %</h3>
-          <ul>
+          <ul role="menubar">
             <li class="percentage tip-selected">5%</li>
             <li class="percentage tip-selected">10%</li>
             <li class="percentage tip-selected">15%</li>
@@ -46,7 +46,7 @@
         </div>
       </main>
 
-      <section class="output">
+      <div role="contentinfo" class="output">
         <div class="calculate">
           <div class="tip-amount">
             <small> Tip Amount <br /><span>/ person</span> </small>
@@ -60,12 +60,12 @@
         <div class="reset">
           <button class="btn" id="btn">RESET</button>
         </div>
-      </section>
+      </div>
     </div>
 
-    <footer role="doc-credits" class="attribution">
+    <!-- <footer  class="attribution">
       Coded by <a href="#">Amit Kumar</a>.
-    </footer>
+    </footer> -->
 
     <script src="/script.js"></script>
   </body>
